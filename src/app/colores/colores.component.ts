@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColoresComponent implements OnInit {
 
+  codigo: String;
+
   constructor() { }
 
   ngOnInit() {
@@ -17,6 +19,7 @@ export class ColoresComponent implements OnInit {
   }
 
   colorhex(): String {
-    return '#' + this.generaramdon() + this.generaramdon() + this.generaramdon();
+    this.codigo = '#' + this.generaramdon() + this.generaramdon() + this.generaramdon();
+    return this.codigo;
   }
 }
