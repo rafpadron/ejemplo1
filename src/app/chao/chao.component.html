@@ -1,3 +1,11 @@
-<p>
-  {{codiguito}}
-</p>
+<div>
+  <div *ngIf="valor ; else texto">
+    <p>
+      {{codiguito}}
+    </p>
+  </div>
+  <ng-template #texto>
+    <p>Dale click al button</p>
+  </ng-template>
+</div>
+<button (click)="valor = !valor">Codigo de color</button>
