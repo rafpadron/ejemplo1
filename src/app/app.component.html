@@ -5,6 +5,13 @@
   <app-colores></app-colores>
   <app-colores></app-colores>
   <app-colores></app-colores>
-  <app-colores></app-colores>
-  <app-colores></app-colores>
-  <app-colores></app-colores>
+ 
+<div [ngSwitch]="jugadores">
+  <p *ngSwitchCase="'Messi'">Delantero,Zurdo,Argentina</p>
+  <p *ngSwitchCase="'Suarez'">Delantero,Diestro,Uruguay</p>
+  <p *ngSwitchCase="'Dembele'">Delantero,Zurdo,Francia</p>
+  <p *ngSwitchCase="'Coutinho'">Delantero,Diestro,Brazil</p>
+  <p *ngSwitchDefault>Escribe Algun Jugador</p>
+</div>
+
+<input type="text" [(ngModel)]="jugadores" />
